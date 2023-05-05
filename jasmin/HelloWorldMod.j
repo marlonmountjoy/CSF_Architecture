@@ -1,7 +1,7 @@
 ; Hello World Jasmin program.
 ; Modified from Jon Meyer's sample HelloWorld.j program.
 ; Replaces deprecated invokenonvirtual with invokespecial.
-.class public HelloWorld
+.class public HelloWorldMod
 .super java/lang/Object
 ;
 ; standard initializer
@@ -16,7 +16,7 @@ return
 ; push System.out onto the stack
 getstatic java/lang/System.out Ljava/io/PrintStream;
 ; push a string onto the stack
-ldc "Hello World from Jasmin!"
+ldc "Hello Neal from Jasmin!"
 ; call the PrintStream.println() method.
 invokevirtual java/io/PrintStream.println(Ljava/lang/String;)V
 ; done
