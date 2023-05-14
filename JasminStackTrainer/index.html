@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+        .half {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 1em;
+            overflow: auto;
+        }
+        .stack {
+            display: flex;
+            flex-direction: column-reverse;
+            flex-grow: 1;
+        }
+        textarea {
+            flex-grow: 1;
+        }
+        .stack .label-input {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1em;
+        }
+        .stack .label-input label {
+            width: 20px;
+            text-align: right;
+            margin-right: 1em;
+        }
+        .stack .label-input input {
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="half">
+            <h2>Jasmin Assembly Code</h2>
+            <textarea id="code"></textarea>
+        </div>
+        <div class="half">
+            <h2>Stack Representation</h2>
+            <div class="stack">
+                <!-- Generate 20 text boxes with labels -->
+                <script>
+                    for (let i = 19; i >= 0; i--) {
+                        document.write(`
+                            <div class="label-input">
+                                <label for="stack${i}">${i}</label>
+                                <input type="text" id="stack${i}">
+                            </div>
+                        `);
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
