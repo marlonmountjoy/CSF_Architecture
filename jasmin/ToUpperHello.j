@@ -27,7 +27,7 @@ getstatic java/lang/System.out Ljava/io/PrintStream;
 ldc "Hello World from Jasmin!"
 
 ; convert the String to upper case using toUpperCase method of the String class
-invokestatic java.lang.String.toUpperCase()V
+ invokevirtual java.lang.String.toUpperCase()Ljava.lang.String;
 
 ; call the PrintStream.println() method.
 
